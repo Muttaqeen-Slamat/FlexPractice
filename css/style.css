@@ -1,0 +1,80 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --clr-dark: black;
+    --clr-light:white;
+    --clr-accent:red;
+}
+
+body{
+    line-height: 1.6;
+    word-spacing: 1.4px;
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    width: 80%;
+    height: 700px;
+    border: 8px dotted var(--clr-dark); 
+}
+
+.item {
+    width: 150px;
+    height: 150px;
+    background-color: #fb7185;
+    padding: 1em;
+    color: var(--clr-light);
+    text-align: center;
+    border: 8px solid var(--clr-accent);
+    border-radius: 10px;
+}
+
+h2{
+    text-align: center;
+    color: grey;
+}
+
+.container{
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content where to put the flex box */
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    /* flex wrap is to set a lot of flexbox items onto the next coloumn or row to that its not on top of each other */
+    /* align-content: flex-end is similar to align items just flex end is at the bottom, center, flex start is on top */
+    /* gap sets a gap between them can use em also for scaling the gap and other measurements */
+}
+
+.item-1 {
+    font-size: 1.5rem;
+    /* flex-shrink: will shrink how much it will shrink again depending on the other properties of the rest of the flex items in the same container*/
+}
+
+.item-3{
+     flex-grow: 1;
+     /* determines how much it will grow depending on the other properties of the rest flex items in the same container */
+}
+
+.item-2{
+    flex-basis: 0;
+    /* flex-basis: changes the initial width of the item */
+}
+
+.item-4{
+    align-self: flex-end;
+    /* align-self: ; align individualy */
+    order: -1;
+    /* order: ; changes the order starting from 0 being the first nummber so you can use -1 to move another flex item behind it so its "number 1" */
+}
